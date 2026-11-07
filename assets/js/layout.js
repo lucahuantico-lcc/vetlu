@@ -11,6 +11,17 @@
   var icoMail = '<svg viewBox="0 0 24 24"><path d="M2 4h20a2 2 0 012 2v12a2 2 0 01-2 2H2a2 2 0 01-2-2V6a2 2 0 012-2zm10 8.7L2.4 6.5v.3L12 13l9.6-6.2v-.3L12 12.7z"/></svg>';
   var icoWA = '<svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1112 21.8zm8.4-18.2A11.8 11.8 0 001.7 17.9L0 24l6.3-1.6a11.8 11.8 0 005.7 1.4A11.8 11.8 0 0020.4 3.6z"/></svg>';
 
+  var icoPin = '<svg viewBox="0 0 24 24"><path d="M12 0C7.6 0 4 3.6 4 8c0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>';
+  var facts = [
+    "Un perro puede entender unas 165 palabras.",
+    "Los gatos casi solo maúllan para hablar con humanos.",
+    "Los dientes de un conejo crecen ~1 cm al mes.",
+    "Un hámster puede correr 9 km en una noche.",
+    "La huella de la nariz de un perro es única.",
+    "Las uvas y pasas pueden dañar los riñones de un perro.",
+    "Los lirios son mortales para los gatos, hasta su polen."
+  ];
+
   var nav = [
     ["inicio", "index.html", "Inicio"],
     ["servicios", "servicios.html", "Servicios"],
@@ -20,14 +31,15 @@
       ["perro", "perro.html", "🐶", "Perros", "Cuidados, edad y salud"],
       ["gato", "gato.html", "🐱", "Gatos", "Felinos felices"],
       ["conejo", "conejo.html", "🐰", "Conejos", "Heno, espacio y calma"],
-      ["hamster", "hamster.html", "🐹", "Hámsters", "Pequeños gigantes"]
+      ["hamster", "hamster.html", "🐹", "Hámsters", "Pequeños gigantes"],
+      ["comida", "comida-prohibida.html", "🚫", "Comida prohibida", "Lo que nunca deben comer"]
     ]],
     ["consejos", "consejos.html", "Consejos"],
     ["visitas", "visitas.html", "¿Cada cuánto?"],
     ["edad", "edad.html", "Edad humana"]
   ];
 
-  var petPages = ["perro", "gato", "conejo", "hamster"];
+  var petPages = ["perro", "gato", "conejo", "hamster", "comida"];
   var links = nav.map(function (n) {
     if (n[3]) {
       var active = petPages.indexOf(page) > -1 ? " active" : "";
@@ -63,20 +75,17 @@
     '<a href="mailto:' + C.email + '" aria-label="Correo">' + icoMail + '</a>' +
     '<a href="' + C.wa() + '" target="_blank" rel="noopener" aria-label="WhatsApp">' + icoWA + '</a>' +
     '</div></div>' +
-    '<div><h4>Explora</h4><ul>' +
-    '<li><a href="servicios.html">Servicios</a></li><li><a href="precios.html">Precios</a></li><li><a href="productos.html">Productos</a></li>' +
-    '<li><a href="consejos.html">Consejos</a></li><li><a href="visitas.html">¿Cada cuánto ir?</a></li><li><a href="edad.html">Edad humana</a></li><li><a href="adopcion.html">Adopción</a></li>' +
-    '</ul></div>' +
-    '<div><h4>Mascotas</h4><ul>' +
-    '<li><a href="perro.html">🐶 Perros</a></li><li><a href="gato.html">🐱 Gatos</a></li><li><a href="conejo.html">🐰 Conejos</a></li><li><a href="hamster.html">🐹 Hámsters</a></li>' +
-    '</ul></div>' +
-    '<div><h4>Visítanos</h4><ul class="hours">' +
+    '<div><h4>Horario de atención</h4><ul class="hours">' +
     C.horario.map(function (h) { return '<li><span>' + h[0] + '</span><b>' + h[1] + '</b></li>'; }).join("") +
-    '</ul><ul style="margin-top:18px">' +
-    '<li>📍 <a href="' + C.mapa + '" target="_blank" rel="noopener">' + C.direccion + ', ' + C.ciudad + '</a></li>' +
-    '<li>📱 <a href="' + C.wa() + '" target="_blank" rel="noopener">' + C.telefono + '</a></li>' +
-    '<li>✉️ <a href="mailto:' + C.email + '">' + C.email + '</a></li>' +
     '</ul></div>' +
+    '<div><h4>Contacto</h4><ul class="contact-list">' +
+    '<li>' + icoPin + '<a href="' + C.mapa + '" target="_blank" rel="noopener">' + C.direccion + '<br>' + C.ciudad + '</a></li>' +
+    '<li>' + icoWA + '<a href="' + C.wa() + '" target="_blank" rel="noopener">' + C.telefono + '</a></li>' +
+    '<li>' + icoMail + '<a href="mailto:' + C.email + '">' + C.email + '</a></li>' +
+    '</ul><a class="btn btn--ghost-light" style="margin-top:18px;padding:.75em 1.2em;font-size:.85rem" href="' + C.mapa + '" target="_blank" rel="noopener">Cómo llegar <span class="arrow">→</span></a></div>' +
+    '<div class="foot-card"><span class="hand">¿sabías que…?</span><p class="fact">' + facts[Math.floor(Math.random() * facts.length)] + '</p>' +
+    '<p class="foot-cta">Adopta y recibe <b>consulta gratis + 6 meses de plan de salud</b>.</p>' +
+    '<a href="adopcion.html" class="btn btn--terra" style="padding:.75em 1.2em;font-size:.85rem">Conoce a los que buscan hogar <span class="arrow">→</span></a></div>' +
     '</div>' +
     '<div class="big-word">VetLu</div>' +
     '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' VetLu · Clínica Veterinaria · Lima, Perú</span><span>Adopta, no compres 🐾</span></div>' +

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comida prohibida para mascotas · VetLu</title>
+  <meta name="description" content="Lista completa de alimentos, plantas y productos tóxicos para perros, gatos, conejos y hámsters: por qué son peligrosos y qué hacer si los comió.">
+  <meta name="theme-color" content="#1c362f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="comida" data-header="dark">
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <a href="index.html" class="back"><span class="circle">←</span>Volver a VetLu</a>
+      <p class="eyebrow" style="color:var(--gold-soft)">Comida prohibida</p>
+      <h1>Lo que <em>nunca</em> debe llegar a su plato</h1>
+      <p class="lead"><b id="toxTotal" style="color:var(--gold-soft)">75</b> alimentos, plantas y productos peligrosos para perros, gatos, conejos y hámsters. Muchos están en cualquier cocina peruana.</p>
+    </div>
+  </section>
+
+  <section class="section--tight" style="padding-bottom:0">
+    <div class="container">
+      <div class="alert reveal" style="margin-top:0">
+        <span class="em">🚨</span>
+        <div>
+          <h3>¿Comió algo de esta lista? Haz esto:</h3>
+          <ul>
+            <li>Mantén la calma y aléjalo de lo que comió.</li>
+            <li><b>No le provoques el vómito</b> ni le des leche, aceite o sal: puede empeorar.</li>
+            <li>Anota qué comió, cuánto y a qué hora.</li>
+            <li>Guarda el empaque o toma una foto (planta, hongo, medicamento).</li>
+            <li>Escríbenos de inmediato y ven a la clínica.</li>
+            <li>Aunque se vea bien, algunos tóxicos actúan horas o días después.</li>
+          </ul>
+          <div class="btn-row" style="margin-top:22px"><a class="btn btn--light" data-wa="Hola VetLu, mi mascota comió algo tóxico">Escribir por emergencia <span class="arrow">→</span></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lista">
+    <div class="container">
+      <div class="tox-tools reveal">
+        <div class="field" style="margin:0">
+          <span class="label">Mi mascota es</span>
+          <div class="chips" data-tox="sp">
+            <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+            <button type="button" data-v="p" aria-pressed="false">🐶 Perro</button>
+            <button type="button" data-v="g" aria-pressed="false">🐱 Gato</button>
+            <button type="button" data-v="c" aria-pressed="false">🐰 Conejo</button>
+            <button type="button" data-v="h" aria-pressed="false">🐹 Hámster</button>
+          </div>
+        </div>
+        <div class="field" style="margin:0">
+          <span class="label">Gravedad</span>
+          <div class="chips" data-tox="lvl">
+            <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+            <button type="button" data-v="mortal" aria-pressed="false">☠️ Puede ser mortal</button>
+            <button type="button" data-v="grave" aria-pressed="false">⚠️ Grave</button>
+            <button type="button" data-v="cuidado" aria-pressed="false">✋ Evitar</button>
+          </div>
+        </div>
+        <div class="field" style="margin:0">
+          <label for="toxSearch">Buscar un alimento</label>
+          <input id="toxSearch" class="tox-search" type="search" placeholder="Ej. palta, panetón, pollo a la brasa…" autocomplete="off">
+        </div>
+        <p class="tox-count"><b id="toxCount">0</b> resultados</p>
+      </div>
+
+      <div id="toxList"></div>
+    </div>
+  </section>
+
+  <section class="section section--sage">
+    <div class="container">
+      <div class="section-head center"><p class="eyebrow">Mejor así</p><h2>Premios <em>seguros</em> para consentirlo</h2><p class="lead">Siempre en poca cantidad, sin sal, sin azúcar y sin condimentos.</p></div>
+      <div class="grid grid-4">
+        <div class="card reveal"><div class="icon">🐶</div><h3>Perro</h3><p>Zanahoria, zapallo cocido, manzana sin pepas, plátano, sandía sin pepas, pollo cocido sin hueso, huevo cocido.</p></div>
+        <div class="card reveal" data-delay="1"><div class="icon">🐱</div><h3>Gato</h3><p>Pollo o pavo cocido sin hueso, pescado cocido sin espinas, huevo cocido, hierba para gatos, snacks para gatos.</p></div>
+        <div class="card reveal" data-delay="2"><div class="icon">🐰</div><h3>Conejo</h3><p>Cilantro, perejil, hojas de zanahoria, lechuga romana, apio en hojas; fresa o papaya solo un trocito.</p></div>
+        <div class="card reveal" data-delay="3"><div class="icon">🐹</div><h3>Hámster</h3><p>Brócoli, pepino, zanahoria, zapallito, huevo cocido, gusanos de harina, avena sin azúcar.</p></div>
+      </div>
+      <p class="disclaimer" style="margin:36px auto 0">Esta lista es informativa y no reemplaza la consulta. Si tu mascota tiene una enfermedad (riñón, diabetes, alergias), consulta antes de darle cualquier alimento nuevo.</p>
+    </div>
+  </section>
+</main>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/toxicos.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>

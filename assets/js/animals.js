@@ -287,7 +287,9 @@
     '<div class="food">' +
     '<div class="food-col yes reveal"><h3><span class="tag">✓</span>Sí puede comer</h3><ul>' + a.si.map(function (f) { return '<li><span class="em">' + f[0] + '</span><div><b>' + f[1] + '</b><span>' + f[2] + '</span></div></li>'; }).join("") + '</ul></div>' +
     '<div class="food-col no reveal" data-delay="2"><h3><span class="tag">✕</span>Nunca le des</h3><ul>' + a.no.map(function (f) { return '<li><span class="em">' + f[0] + '</span><div><b>' + f[1] + '</b><span>' + f[2] + '</span></div></li>'; }).join("") + '</ul></div>' +
-    '</div></div></section>' +
+    '</div>' +
+    '<div class="center" style="margin-top:32px"><a href="comida-prohibida.html#' + key + '" class="btn btn--terra">Ver la lista completa de alimentos prohibidos <span class="arrow">→</span></a></div>' +
+    '</div></section>' +
 
     /* 6. Cuidado diario */
     '<section class="section" id="dia"><div class="container">' +
@@ -317,7 +319,7 @@
     /* 8. Adopción */
     '<section class="section--tight"><div class="container">' +
     '<div class="cta-band reveal"><div><p class="eyebrow" style="color:var(--gold-soft)">Adopta, no compres</p><h2>Hay ' + a.plural + ' esperando <em>un hogar como el tuyo</em></h2>' +
-    '<p>En VetLu los entregamos vacunados, desparasitados y con su primera consulta gratis.</p></div>' +
+    '<p>En VetLu los entregamos vacunados, desparasitados, con su primera consulta gratis y 6 meses de plan de salud gratis.</p></div>' +
     '<div class="btn-row"><a href="adopcion.html#' + key + '" class="btn btn--light">Conocerlos <span class="arrow">→</span></a></div></div>' +
     '</div></section>' +
 
