@@ -238,7 +238,7 @@
     '<div class="intro-bg"><img src="' + img(a.foto, 2000) + '" alt="' + a.nombre + '" fetchpriority="high"></div>' +
     '<div class="container" style="width:min(var(--max),100% - 32px)">' +
     '<a href="index.html" class="back fade-up" style="animation-delay:.1s"><span class="circle">←</span>Volver a VetLu</a>' +
-    '<p class="eyebrow fade-up" style="color:var(--gold-soft);animation-delay:.2s">Guía de cuidado · ' + a.em + '</p>' +
+    '<p class="eyebrow fade-up" style="color:var(--gold-soft);animation-delay:.2s">Guía de cuidado</p>' +
     '<h1 aria-label="' + a.nombre + '">' + letters + '</h1>' +
     '<p class="tagline fade-up" style="animation-delay:.7s">' + a.tagline + '</p>' +
     '<p class="lead fade-up" style="animation-delay:.85s">' + a.intro + '</p>' +
@@ -338,12 +338,18 @@
 
   // Sub-navegación activa
   var links = root.querySelectorAll(".subnav a");
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle("active", l.getAttribute("href") === "#" + e.target.id); });
-      });
-    }, { rootMargin: "-45% 0px -50% 0px" });
-    ["cuidados", "edad", "etapas", "comida", "dia", "salud"].forEach(function (id) { io.observe(document.getElementById(id)); });
+  var ids = ["cuidados", "edad", "etapas", "comida", "dia", "salud"];
+  var ticking = false;
+  function spy() {
+    var current = null;
+    ids.forEach(function (id) { if (document.getElementById(id).getBoundingClientRect().top < 160) current = id; });
+    links.forEach(function (l) {
+      var on = l.getAttribute("href") === "#" + current;
+      l.classList.toggle("active", on);
+      if (on) l.parentElement.parentElement.scrollLeft = l.offsetLeft - 16; // mantiene visible la pestaña activa en celular
+    });
+    ticking = false;
   }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(spy); } }, { passive: true });
+  spy();
 })();

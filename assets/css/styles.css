@@ -450,7 +450,8 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 .intro-bg { position: absolute; inset: 0; z-index: -2; }
 .intro-bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); animation: introZoom 2.6s var(--ease) forwards; }
 @keyframes introZoom { to { transform: scale(1); } }
-.intro::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(24, 34, 30, .35) 0%, rgba(24, 34, 30, .1) 35%, rgba(24, 34, 30, .9) 100%); }
+.intro::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(24, 34, 30, .78) 0%, rgba(24, 34, 30, .35) 55%, rgba(24, 34, 30, 0) 80%), linear-gradient(180deg, rgba(24, 34, 30, .4) 0%, rgba(24, 34, 30, .05) 35%, rgba(24, 34, 30, .85) 100%); }
+@media (max-width: 700px) { .intro::before { background: linear-gradient(180deg, rgba(24, 34, 30, .45) 0%, rgba(24, 34, 30, .55) 40%, rgba(24, 34, 30, .92) 100%); } }
 .intro .back { margin-bottom: 0; position: absolute; top: 100px; }
 .intro h1 { font-size: clamp(4rem, 13vw, 11rem); color: var(--white); margin-bottom: .1em; line-height: .9; }
 .intro h1 .char { display: inline-block; opacity: 0; transform: translateY(60%); animation: rise .9s var(--ease) forwards; }
