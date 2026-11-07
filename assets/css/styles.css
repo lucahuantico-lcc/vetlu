@@ -838,3 +838,4 @@ section[id], [data-filter-group] { scroll-margin-top: 130px; }
 /* Evita que tablas o textos largos ensanchen las cuadrículas en celular */
 .grid > *, .calc > *, .split > *, .food > *, .plans > *, .tox-grid > *, .map-wrap > *, .footer-grid > * { min-width: 0; }
 @media (max-width: 520px) { .age-table th, .age-table td { padding: 10px 8px; font-size: .88rem; } .species { gap: 6px; } .species button { font-size: .8rem; } }
+@media (max-width: 520px) { .btn { white-space: normal; text-align: center; justify-content: center; line-height: 1.25; } }
