@@ -834,3 +834,7 @@ section[id], [data-filter-group] { scroll-margin-top: 130px; }
 .tox-sp { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
 .tox-sp span { font-size: .72rem; font-weight: 700; background: var(--cream); color: var(--forest); padding: 4px 9px; border-radius: 999px; }
 .tox-empty { text-align: center; color: var(--muted); padding: 40px 0; }
+
+/* Evita que tablas o textos largos ensanchen las cuadrículas en celular */
+.grid > *, .calc > *, .split > *, .food > *, .plans > *, .tox-grid > *, .map-wrap > *, .footer-grid > * { min-width: 0; }
+@media (max-width: 520px) { .age-table th, .age-table td { padding: 10px 8px; font-size: .88rem; } .species { gap: 6px; } .species button { font-size: .8rem; } }
