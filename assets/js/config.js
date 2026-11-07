@@ -7,7 +7,7 @@ window.VETLU = {
   whatsapp: "51925659628",           // código de país + número, sin espacios ni +
   telefono: "925 659 628",
   email: "lucahuantico@gmail.com",
-  instagram: "https://www.instagram.com/",   // ← reemplaza por tu perfil
+  instagram: "https://www.instagram.com/luis.cahuantico_c/",
   x: "https://x.com/",                       // ← reemplaza por tu perfil
   direccion: "San Gabriel, Villa María del Triunfo",
   ciudad: "Lima, Perú",
