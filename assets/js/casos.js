@@ -11,8 +11,9 @@
       q: "¿Mi perro puede comer camote crudo?",
       v: ["Mejor cocido", "ojo"],
       corto: "No es tóxico, pero crudo es difícil de digerir. Cocido y sin cáscara es un buen premio.",
-      porque: ["Crudo provoca gases, vómitos o diarrea.", "Los trozos duros pueden obstruir el intestino.", "Le atrae su olor dulce."],
-      hacer: ["Ofrézcalo sancochado, sin cáscara, sal ni azúcar.", "Máximo 1–2 cucharadas al día en un perro mediano.", "Guarde camotes y papas fuera de su alcance."],
+      porqueT: "¿Por qué no crudo?",
+      porque: ["El almidón crudo es difícil de digerir para el perro.", "Por eso puede causarle gases, vómitos o diarrea.", "Los trozos duros pueden obstruir el intestino."],
+      hacer: ["Ofrézcalo sancochado, sin cáscara, sal ni azúcar.", "Máximo 1–2 cucharadas al día en un perro mediano.", "Guárdelo fuera de su alcance: su olor dulce lo atrae."],
       vet: ["Vómitos repetidos", "Abdomen hinchado", "Más de 24 horas sin defecar"],
       tip: "Congelado dentro de un juguete rellenable, es un premio sano y entretenido."
     },
@@ -245,7 +246,7 @@
         '<div class="acc-panel"><div><div class="caso-body">' +
         '<p class="caso-corto">' + c.corto + '</p>' +
         '<div class="caso-cols">' +
-        '<div class="box"><h4>¿Por qué ocurre?</h4>' + li(c.porque) + '</div>' +
+        '<div class="box"><h4>' + (c.porqueT || "¿Por qué ocurre?") + '</h4>' + li(c.porque) + '</div>' +
         '<div class="box"><h4>Qué hacer</h4>' + li(c.hacer) + '</div>' +
         '<div class="box vet"><h4>Acuda al veterinario si</h4>' + li(c.vet) + '</div>' +
         '</div>' +
