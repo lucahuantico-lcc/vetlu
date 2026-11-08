@@ -9,6 +9,7 @@ window.VETLU = {
   email: "lucahuantico@gmail.com",
   instagram: "https://www.instagram.com/luis.cahuantico_c/",
   x: "https://x.com/LuisCaCi",
+  tiktok: "https://www.tiktok.com/@luiscahuantico",
   direccion: "San Gabriel, Villa María del Triunfo",
   ciudad: "Lima, Perú",
   mapa: "https://www.google.com/maps/search/?api=1&query=San+Gabriel+Villa+Maria+del+Triunfo+Lima",
