@@ -839,3 +839,9 @@ section[id], [data-filter-group] { scroll-margin-top: 130px; }
 .grid > *, .calc > *, .split > *, .food > *, .plans > *, .tox-grid > *, .map-wrap > *, .footer-grid > * { min-width: 0; }
 @media (max-width: 520px) { .age-table th, .age-table td { padding: 10px 8px; font-size: .88rem; } .species { gap: 6px; } .species button { font-size: .8rem; } }
 @media (max-width: 520px) { .btn { white-space: normal; text-align: center; justify-content: center; line-height: 1.25; } }
+
+/* Test: botón Anterior y opción elegida */
+.quiz-nav { display: flex; margin-top: 22px; }
+.quiz-back { background: none; border: 1.5px solid var(--line); border-radius: 999px; padding: 10px 18px; font: 700 .9rem var(--f-body); color: var(--forest); cursor: pointer; transition: background .25s, color .25s, border-color .25s; }
+.quiz-back:hover { background: var(--forest); color: var(--cream); border-color: var(--forest); }
+.quiz .opts button.chosen { border-color: var(--terra); background: var(--terra-soft); }

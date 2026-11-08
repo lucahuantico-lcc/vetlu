@@ -58,27 +58,43 @@
       conejo: ["🐰", "¡Un conejo!", "Eres paciente y detallista. Un conejo te sorprenderá con su inteligencia y sus 'binkies'."],
       hamster: ["🐹", "¡Un hámster!", "Tu espacio y horario son ideales para un pequeño nocturno lleno de personalidad."]
     };
-    var step = 0, score = { perro: 0, gato: 0, conejo: 0, hamster: 0 };
+    // answers[n] = índice de la opción elegida en la pregunta n (permite volver atrás)
+    var step = 0, answers = [];
+    var backBtn = '<button type="button" class="quiz-back" data-back>← Anterior</button>';
+    function score() {
+      var s = { perro: 0, gato: 0, conejo: 0, hamster: 0 };
+      answers.forEach(function (a, n) {
+        var pts = Q[n][1][a][1];
+        Object.keys(pts).forEach(function (k) { s[k] += pts[k]; });
+      });
+      return s;
+    }
     function render() {
       var pct = step / Q.length * 100;
       if (step >= Q.length) {
-        var best = Object.keys(score).sort(function (a, b) { return score[b] - score[a]; })[0];
+        var s = score();
+        var best = Object.keys(s).sort(function (a, b) { return s[b] - s[a]; })[0];
         var r = R[best];
         quizBox.innerHTML = '<div class="progress"><span style="width:100%"></span></div><div class="final"><span class="em">' + r[0] + '</span><h3 style="font-size:2.2rem">' + r[1] + '</h3><p class="lead" style="margin:0 auto 24px">' + r[2] + '</p>' +
-          '<div class="btn-row" style="justify-content:center"><a href="adopcion.html#' + best + '" class="btn btn--terra">Conoce a los que buscan hogar <span class="arrow">→</span></a><a href="' + best + '.html" class="btn btn--ghost">Leer su guía</a><button class="btn btn--ghost" type="button" id="quizAgain">Repetir</button></div></div>';
-        document.getElementById("quizAgain").onclick = function () { step = 0; score = { perro: 0, gato: 0, conejo: 0, hamster: 0 }; render(); };
+          '<div class="btn-row" style="justify-content:center"><a href="adopcion.html#' + best + '" class="btn btn--terra">Conoce a los que buscan hogar <span class="arrow">→</span></a><a href="' + best + '.html" class="btn btn--ghost">Leer su guía</a><button class="btn btn--ghost" type="button" data-again>Repetir</button></div>' +
+          '<div class="quiz-nav" style="justify-content:center">' + backBtn + '</div></div>';
         return;
       }
       var q = Q[step];
       quizBox.innerHTML = '<div class="progress"><span style="width:' + pct + '%"></span></div>' +
         '<p class="eyebrow">Pregunta ' + (step + 1) + ' de ' + Q.length + '</p><p class="qtext">' + q[0] + '</p>' +
-        '<div class="opts">' + q[1].map(function (o, i) { return '<button type="button" data-i="' + i + '">' + o[0] + '</button>'; }).join("") + '</div>';
+        '<div class="opts">' + q[1].map(function (o, i) {
+          return '<button type="button" data-i="' + i + '"' + (answers[step] === i ? ' class="chosen"' : '') + '>' + o[0] + '</button>';
+        }).join("") + '</div>' +
+        (step > 0 ? '<div class="quiz-nav">' + backBtn + '</div>' : '');
     }
     quizBox.addEventListener("click", function (e) {
+      if (e.target.closest("[data-back]")) { step--; render(); return; }
+      if (e.target.closest("[data-again]")) { step = 0; answers = []; render(); return; }
       var b = e.target.closest("[data-i]");
       if (!b) return;
-      var pts = Q[step][1][+b.dataset.i][1];
-      Object.keys(pts).forEach(function (k) { score[k] += pts[k]; });
+      answers[step] = +b.dataset.i;
+      answers.length = step + 1; // al cambiar una respuesta, se vuelven a contestar las siguientes
       step++;
       render();
     });
