@@ -293,7 +293,8 @@
 
     /* 6. Cuidado diario */
     '<section class="section" id="dia"><div class="container">' +
-    '<div class="section-head"><p class="eyebrow">Rutina</p><h2>Cuidado <em>día a día</em></h2></div>' +
+    '<div class="section-head section-head--split"><div><p class="eyebrow">Rutina</p><h2>Cuidado <em>día a día</em></h2></div>' +
+    '<p class="lead">¿Hace algo raro? <a href="por-que-hace-eso.html#' + key + '" style="color:var(--terra);font-weight:700">Mira por qué pasa y cómo corregirlo →</a></p></div>' +
     '<div class="grid grid-3">' + a.cuidados.map(function (c, i) {
       return '<div class="card reveal" data-delay="' + (i % 3 + 1) + '"><div class="icon">' + c[0] + '</div><h3>' + c[1] + '</h3><p>' + c[2] + '</p></div>';
     }).join("") + '</div></div></section>' +

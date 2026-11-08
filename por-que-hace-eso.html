@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Por qué hace eso? · VetLu</title>
+  <meta name="description" content="¿Tu perro come plástico, atrapa moscas u orina por todos lados? Casos reales de comportamiento y alimentación de perros, gatos, conejos y hámsters: por qué pasa y cómo solucionarlo.">
+  <meta name="theme-color" content="#1c362f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="casos" data-header="dark">
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <a href="index.html" class="back"><span class="circle">←</span>Volver a VetLu</a>
+      <p class="eyebrow" style="color:var(--gold-soft)">Casos reales</p>
+      <h1>¿Por qué <em>hace eso?</em></h1>
+      <p class="lead">Come plástico, atrapa moscas, orina por toda la casa… Son preguntas que todos los dueños nos hacemos. Aquí te explicamos por qué pasa, si es malo y cómo solucionarlo.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:clamp(40px,6vw,72px)">
+    <div class="container">
+      <div class="tox-tools reveal">
+        <div class="field" style="margin:0">
+          <span class="label">Mi mascota es</span>
+          <div class="chips" data-casos>
+            <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+            <button type="button" data-v="perro" aria-pressed="false">🐶 Perro</button>
+            <button type="button" data-v="gato" aria-pressed="false">🐱 Gato</button>
+            <button type="button" data-v="conejo" aria-pressed="false">🐰 Conejo</button>
+            <button type="button" data-v="hamster" aria-pressed="false">🐹 Hámster</button>
+          </div>
+        </div>
+        <div class="field" style="margin:0">
+          <label for="casosSearch">Busca lo que le pasa</label>
+          <input id="casosSearch" class="tox-search" type="search" placeholder="Ej. plástico, moscas, orina, camote…" autocomplete="off">
+        </div>
+        <div class="legend">
+          <span class="verdict ok">Normal</span>
+          <span class="verdict ojo">Hay que corregirlo</span>
+          <span class="verdict vet">Consultar pronto</span>
+        </div>
+        <p class="tox-count"><b id="casosCount">0</b> casos</p>
+      </div>
+
+      <div id="casos"></div>
+
+      <p class="disclaimer" style="margin-top:40px">Esta información es orientativa y no reemplaza una consulta. Cada animal es distinto: si la conducta es nueva, empeora o viene con otros síntomas, tráelo a revisión.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div><p class="eyebrow" style="color:var(--gold-soft)">¿Tu mascota hace algo raro?</p><h2>Cuéntanos tu caso, <em>te orientamos</em></h2><p>Envíanos un video corto por WhatsApp: muchas veces con eso ya sabemos si es normal o si conviene revisarlo.</p></div>
+        <div class="btn-row"><a class="btn btn--light" data-wa="Hola VetLu, mi mascota hace algo raro y quiero consultarles">Contar mi caso <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/casos.js"></script>
+<script src="assets/js/layout.js"></script>
+</body>
+</html>

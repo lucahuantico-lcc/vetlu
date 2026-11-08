@@ -32,14 +32,15 @@
       ["gato", "gato.html", "🐱", "Gatos", "Felinos felices"],
       ["conejo", "conejo.html", "🐰", "Conejos", "Heno, espacio y calma"],
       ["hamster", "hamster.html", "🐹", "Hámsters", "Pequeños gigantes"],
-      ["comida", "comida-prohibida.html", "🚫", "Comida prohibida", "Lo que nunca deben comer"]
+      ["comida", "comida-prohibida.html", "🚫", "Comida prohibida", "Lo que nunca deben comer"],
+      ["casos", "por-que-hace-eso.html", "🤔", "¿Por qué hace eso?", "Conductas raras y cómo corregirlas"]
     ]],
     ["consejos", "consejos.html", "Consejos"],
     ["visitas", "visitas.html", "¿Cada cuánto?"],
     ["edad", "edad.html", "Edad humana"]
   ];
 
-  var petPages = ["perro", "gato", "conejo", "hamster", "comida"];
+  var petPages = ["perro", "gato", "conejo", "hamster", "comida", "casos"];
   var links = nav.map(function (n) {
     if (n[3]) {
       var active = petPages.indexOf(page) > -1 ? " active" : "";
