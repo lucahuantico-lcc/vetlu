@@ -846,3 +846,5 @@ section[id], [data-filter-group] { scroll-margin-top: 130px; }
 .quiz-back:hover { background: var(--forest); color: var(--cream); border-color: var(--forest); }
 .quiz .opts button.chosen { border-color: var(--terra); background: var(--terra-soft); }
 .foot-card .btn { white-space: normal; text-align: center; justify-content: center; line-height: 1.25; max-width: 100%; }
+.plan .per-day { display: inline-block; margin-top: 4px; font-size: .8rem; font-weight: 800; color: var(--forest); background: var(--sage-soft); padding: 4px 10px; border-radius: 999px; }
+.plan.featured .per-day { background: rgba(247, 242, 232, .14); color: var(--gold-soft); }

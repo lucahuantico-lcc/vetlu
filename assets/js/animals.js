@@ -20,7 +20,7 @@
         ["🗣️", "¿Cuántas palabras entienden?", "~165", "Un perro promedio entiende unas 165 palabras y gestos; los más listos, más de 250."]
       ],
       etapas: [
-        ["🍼", "Cachorro", "0 a 12 meses", "Vacunas, desparasitación y socialización con personas, ruidos y otros perros.", "Cada 3–4 semanas"],
+        ["🍼", "Cachorro", "0 a 12 meses", "Desparasitación desde las 2 semanas; vacunas de parvovirus, triple y antirrábica hasta los 4 meses. Socialización con personas, ruidos y otros perros.", "Cada 3–4 semanas"],
         ["⚡", "Joven", "1 a 3 años", "Mucha energía. Momento ideal para educar con refuerzo positivo y esterilizar.", "1 vez al año"],
         ["🌿", "Adulto", "3 a 7 años", "Mantener peso ideal, higiene dental y ejercicio constante.", "1 vez al año"],
         ["🧡", "Senior", "7 años a más", "Chequeos con análisis de sangre, cuidado de articulaciones, corazón y riñones.", "Cada 6 meses"]
@@ -50,8 +50,8 @@
         ["🏷️", "Identificación", "Placa con tu teléfono y microchip. Así, si se pierde, vuelve a casa."]
       ],
       enfermedades: [
-        { n: "Parvovirus", lvl: "alta", s: ["Vómitos y diarrea con sangre", "Decaimiento y fiebre", "No quiere comer", "Muy común en cachorros sin vacunas"], q: ["Ve al veterinario de inmediato: es una emergencia", "No le des medicinas caseras", "Aíslalo de otros perros", "Desinfecta con lejía diluida"], p: ["Vacuna desde las 6–8 semanas", "No sacarlo a la calle hasta completar vacunas", "Refuerzo anual"] },
-        { n: "Moquillo (distemper)", lvl: "alta", s: ["Secreción en ojos y nariz", "Tos y fiebre", "Almohadillas endurecidas", "Temblores o convulsiones"], q: ["Atención veterinaria urgente", "Hidratación y reposo en un lugar cálido", "Aislamiento estricto"], p: ["Vacuna múltiple (séxtuple u óctuple)", "Refuerzo anual"] },
+        { n: "Parvovirus", lvl: "alta", s: ["Vómitos y diarrea con sangre", "Decaimiento y fiebre", "No quiere comer", "Muy común en cachorros sin vacunas"], q: ["Ve al veterinario de inmediato: es una emergencia", "No le des medicinas caseras", "Aíslalo de otros perros", "Desinfecta con lejía diluida"], p: ["Vacuna parvovirus + coronavirus al mes y medio y a los 2 meses y medio", "No sacarlo a la calle hasta completar vacunas", "Revacunación anual (quíntuple)"] },
+        { n: "Moquillo (distemper)", lvl: "alta", s: ["Secreción en ojos y nariz", "Tos y fiebre", "Almohadillas endurecidas", "Temblores o convulsiones"], q: ["Atención veterinaria urgente", "Hidratación y reposo en un lugar cálido", "Aislamiento estricto"], p: ["Vacuna triple (moquillo, hepatitis, leptospira) a los 2 y 3 meses", "Revacunación anual (quíntuple)"] },
         { n: "Pulgas, garrapatas y ehrlichiosis", lvl: "media", s: ["Rascado constante", "Garrapatas visibles en orejas y patas", "Fiebre, sangrado nasal o encías pálidas"], q: ["Retira garrapatas con pinza, sin aplastarlas", "Consulta para análisis si hay fiebre", "Trata también el ambiente (cama, mantas)"], p: ["Antipulgas mensual o trimestral", "Revisarlo después de cada paseo"] },
         { n: "Otitis", lvl: "media", s: ["Sacude la cabeza", "Mal olor u oído rojo", "Se rasca la oreja"], q: ["No uses hisopos ni remedios caseros", "Consulta para un limpiador y tratamiento adecuado"], p: ["Secar bien sus orejas tras el baño", "Limpieza quincenal"] },
         { n: "Golpe de calor", lvl: "alta", s: ["Jadeo exagerado", "Lengua muy roja o morada", "Babeo y tambaleo"], q: ["Llévalo a la sombra", "Moja con agua fresca (no helada) patas, ingle y cuello", "Ofrécele agua en pequeñas cantidades", "Ve al veterinario aunque mejore"], p: ["Nunca lo dejes en un auto cerrado", "Pasea temprano o al atardecer en verano"] },
@@ -73,7 +73,7 @@
         ["👂", "¿Cuánto giran sus orejas?", "180°", "Cada oreja tiene 32 músculos y se mueve de forma independiente."]
       ],
       etapas: [
-        ["🍼", "Gatito", "0 a 12 meses", "Vacuna triple felina, desparasitación y aprender arenero y rascador.", "Cada 3–4 semanas"],
+        ["🍼", "Gatito", "0 a 12 meses", "Desparasitación al mes, triple felina a los 2 y 3 meses y rabia a los 3 meses y medio. Aprende arenero y rascador.", "Cada 3–4 semanas"],
         ["⚡", "Joven", "1 a 3 años", "Esterilización y rutinas de juego. Mucha curiosidad: protege ventanas.", "1 vez al año"],
         ["🌿", "Adulto", "3 a 10 años", "Controlar peso y consumo de agua. Revisar dientes.", "1 vez al año"],
         ["🧡", "Senior", "10 años a más", "Análisis de riñón y tiroides, control de presión y articulaciones.", "Cada 6 meses"]
@@ -104,7 +104,7 @@
       ],
       enfermedades: [
         { n: "Obstrucción urinaria (FLUTD)", lvl: "alta", s: ["Va mucho al arenero y sale poca o nada de orina", "Orina fuera del arenero o con sangre", "Se lame los genitales y maúlla al orinar"], q: ["Si es macho y no orina: emergencia, puede ser mortal en 24–48 h", "Ve al veterinario de inmediato"], p: ["Comida húmeda y más agua", "Mantener peso ideal", "Arenero siempre limpio"] },
-        { n: "Gripe felina (rinotraqueítis / calicivirus)", lvl: "media", s: ["Estornudos y mocos", "Ojos llorosos o pegados", "Llagas en la boca, deja de comer"], q: ["Consulta para tratamiento y evitar complicaciones", "Limpia ojos y nariz con suero", "Ofrécele comida húmeda tibia (más olor = más apetito)"], p: ["Vacuna triple felina", "Refuerzo anual"] },
+        { n: "Gripe felina (rinotraqueítis / calicivirus)", lvl: "media", s: ["Estornudos y mocos", "Ojos llorosos o pegados", "Llagas en la boca, deja de comer"], q: ["Consulta para tratamiento y evitar complicaciones", "Limpia ojos y nariz con suero", "Ofrécele comida húmeda tibia (más olor = más apetito)"], p: ["Triple felina a los 2 y 3 meses", "Revacunación anual"] },
         { n: "Leucemia (FeLV) e inmunodeficiencia (FIV)", lvl: "alta", s: ["Pérdida de peso", "Infecciones que se repiten", "Encías pálidas o inflamadas"], q: ["Prueba rápida en consulta", "Con buen manejo pueden vivir muchos años"], p: ["Prueba antes de juntarlo con otros gatos", "Vacuna de leucemia", "Esterilización (menos peleas)"] },
         { n: "Enfermedad renal crónica", lvl: "media", s: ["Toma mucha agua y orina mucho", "Pierde peso", "Vómitos y mal aliento"], q: ["Análisis de sangre y orina", "Dieta renal recetada", "Hidratación constante"], p: ["Chequeo anual desde los 7 años", "Comida húmeda"] },
         { n: "Bolas de pelo", lvl: "baja", s: ["Arcadas o tos seca", "Vomita pelo en forma de tubo"], q: ["Cepillado más frecuente", "Malta o pasta para bolas de pelo", "Si vomita seguido o no come: consulta"], p: ["Cepillado regular", "Hierba para gatos"] }
