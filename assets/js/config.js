@@ -16,7 +16,7 @@ window.VETLU = {
   horario: [
     ["Lunes a sábado", "9:00 a.m. – 8:00 p.m."],
     ["Domingos", "9:00 a.m. – 1:00 p.m."],
-    ["Emergencias", "Escríbenos por WhatsApp"]
+    ["Emergencias", "Por WhatsApp"]
   ]
 };
 

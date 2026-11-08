@@ -18,7 +18,7 @@ window.VetAge = (function () {
     },
     hamster: {
       label: "Hámster", em: "🐹", maxM: 48, vida: "2–3 años",
-      regla: "Cada mes ≈ 2 años humanos: a los 12 meses ya tiene unos 26."
+      regla: "Cada mes equivale a unos 2 años humanos."
     }
   };
   var RATE = { pequeno: 4, mediano: 5, grande: 6, gigante: 7 };
@@ -28,27 +28,27 @@ window.VetAge = (function () {
     if (sp === "perro") {
       var s = size === "gigante" ? 60 : size === "grande" ? 72 : 84;
       return [
-        ["Cachorro", 12, "Etapa de vacunas, socialización y mucho juego. Completa su calendario antes de sacarlo a la calle.", "Cada 3–4 semanas"],
-        ["Joven", 36, "Energía al máximo: ejercicio diario, educación con refuerzo positivo y esterilización si aún no se hizo.", "1 vez al año"],
-        ["Adulto", s, "Mantén su peso ideal, cepilla sus dientes y revisa piel y oídos en cada baño.", "1 vez al año"],
-        ["Senior", 240, "Chequeos con análisis de sangre, cuidado de articulaciones y paseos más cortos pero frecuentes.", "Cada 6 meses"]
+        ["Cachorro", 12, "Complete sus vacunas antes de sacarlo a la calle.", "Cada 3–4 semanas"],
+        ["Joven", 36, "Ejercicio diario, educación y esterilización.", "1 vez al año"],
+        ["Adulto", s, "Mantenga su peso ideal y su higiene dental.", "1 vez al año"],
+        ["Senior", 240, "Análisis de sangre y cuidado de articulaciones.", "Cada 6 meses"]
       ];
     }
     if (sp === "gato") return [
-      ["Gatito", 12, "Vacunas, desparasitación y juego de caza. Enséñale el arenero y el rascador desde ahora.", "Cada 3–4 semanas"],
-      ["Joven", 36, "Ideal para esterilizar y crear rutinas. Juegos de caza 2 veces al día.", "1 vez al año"],
-      ["Adulto", 120, "Vigila su peso y que tome suficiente agua: la comida húmeda ayuda a sus riñones.", "1 vez al año"],
-      ["Senior", 300, "Riñones, tiroides y dientes son prioridad. Pon rampas o escalones a sus lugares altos.", "Cada 6 meses"]
+      ["Gatito", 12, "Vacunas, desparasitación y uso del arenero.", "Cada 3–4 semanas"],
+      ["Joven", 36, "Momento ideal para esterilizarlo.", "1 vez al año"],
+      ["Adulto", 120, "Controle su peso y su consumo de agua.", "1 vez al año"],
+      ["Senior", 300, "Controle riñones, tiroides y dientes.", "Cada 6 meses"]
     ];
     if (sp === "conejo") return [
-      ["Joven", 12, "Mucho heno, espacio para correr y primera visita con veterinario de exóticos.", "Cada 6 meses"],
-      ["Adulto", 72, "Revisa dientes y peso. Esterilizar previene problemas graves, sobre todo en hembras.", "Cada 6–12 meses"],
-      ["Senior", 168, "Atento a la artritis: suelos blandos, accesos bajos y revisión dental frecuente.", "Cada 6 meses"]
+      ["Joven", 12, "Heno ilimitado y primera visita veterinaria.", "Cada 6 meses"],
+      ["Adulto", 72, "Control dental y esterilización.", "Cada 6–12 meses"],
+      ["Senior", 168, "Suelos blandos y control dental frecuente.", "Cada 6 meses"]
     ];
     return [
-      ["Joven", 6, "Manipúlalo con calma y poco a poco, con premios en tu mano, para ganar su confianza.", "Al adoptar"],
-      ["Adulto", 18, "Rueda grande, sustrato profundo para excavar y una dieta variada.", "Cada 6 meses"],
-      ["Senior", 48, "Su metabolismo cambia rápido: controla peso, dientes y cualquier bulto.", "Cada 3–4 meses"]
+      ["Joven", 6, "Gane su confianza con premios en la mano.", "Al adoptar"],
+      ["Adulto", 18, "Rueda grande y sustrato profundo.", "Cada 6 meses"],
+      ["Senior", 48, "Controle su peso, dientes y bultos.", "Cada 3–4 meses"]
     ];
   }
 
@@ -102,7 +102,7 @@ window.VetAge = (function () {
       '<input type="range" id="age-' + sp + '" min="1" step="1">' +
       '<div class="range-ends"><span>1 mes</span><span class="max"></span></div></div>' +
       '<div class="rule"><b>Regla rápida</b><span class="rule-txt"></span></div>' +
-      '<p class="note">Cálculo aproximado basado en tablas veterinarias. Cada animal envejece distinto según su raza, genética y cuidados.</p>' +
+      '<p class="note">Cálculo aproximado según tablas veterinarias.</p>' +
       '</div>' +
       '<div class="result" aria-live="polite">' +
       '<span class="label">Equivale a</span>' +

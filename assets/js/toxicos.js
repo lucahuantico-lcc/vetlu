@@ -7,103 +7,103 @@
   var CATS = [
     ["golosinas", "🍫", "Golosinas y bebidas"],
     ["frutas", "🍇", "Frutas"],
-    ["verduras", "🧅", "Verduras, hierbas y condimentos"],
+    ["verduras", "🧅", "Verduras y condimentos"],
     ["animal", "🍗", "Carnes, lácteos y huevos"],
-    ["casa", "🍟", "Comida de casa y snacks"],
-    ["semillas", "🥜", "Frutos secos, semillas y granos"],
-    ["plantas", "🌿", "Plantas que se comen por curiosidad"],
-    ["hogar", "💊", "Medicinas y productos del hogar"]
+    ["casa", "🍟", "Comida casera y snacks"],
+    ["semillas", "🥜", "Frutos secos y semillas"],
+    ["plantas", "🌿", "Plantas"],
+    ["hogar", "💊", "Medicamentos y productos del hogar"]
   ];
 
   var T = [
     // ---------- Golosinas y bebidas ----------
-    ["golosinas", "🍫", "Chocolate y cacao", "Chocolate negro, de leche, bitter, cacao en polvo, brownies, chocotejas", "pgch", "mortal", "La teobromina y la cafeína aceleran el corazón. Causa vómitos, temblores, arritmias y convulsiones. El chocolate negro y el cacao son los más peligrosos."],
-    ["golosinas", "☕", "Café, té y bebidas con cafeína", "Café, té, mate, energizantes, gaseosas cola, pastillas de cafeína", "pgch", "grave", "Provoca taquicardia, hiperactividad, temblores y, en dosis altas, convulsiones."],
-    ["golosinas", "🍬", "Xilitol (endulzante)", "Chicles y caramelos “sin azúcar”, gomitas light, algunas mantequillas de maní, pasta dental", "pgch", "mortal", "En perros libera insulina de golpe: baja el azúcar en minutos y puede destruir el hígado. Revisa siempre la etiqueta."],
-    ["golosinas", "🍺", "Alcohol", "Cerveza, vino, pisco, chicha fermentada, postres o tortas con licor", "pgch", "mortal", "Incluso poca cantidad causa vómitos, descoordinación, baja de temperatura, coma y muerte."],
-    ["golosinas", "🍞", "Panetón y queques con pasas", "Panetón, queque inglés, galletas o pan con pasas", "pg", "mortal", "Las pasas pueden causar insuficiencia renal aguda en perros. Muy común en Navidad: no le des “un pedacito”."],
-    ["golosinas", "🍰", "Dulces, tortas y helados", "Torta, helado, picarones, mazamorra, arroz con leche, alfajores, gelatina", "pgch", "cuidado", "Exceso de azúcar y grasa: diarrea, obesidad, diabetes y pancreatitis. Algunos traen chocolate, pasas o xilitol."],
-    ["golosinas", "🥤", "Gaseosas y jugos azucarados", "Gaseosas, refrescos, jugos de caja, bebidas deportivas", "pgch", "cuidado", "Azúcar, gas y cafeína en algunas. Solo deben tomar agua fresca."],
+    ["golosinas", "🍫", "Chocolate y cacao", "Chocolate, cacao en polvo, brownies, chocotejas", "pgch", "mortal", "Altera el ritmo cardíaco y provoca convulsiones."],
+    ["golosinas", "☕", "Café, té y energizantes", "Café, té, mate, gaseosas cola", "pgch", "grave", "La cafeína causa taquicardia y temblores."],
+    ["golosinas", "🍬", "Xilitol", "Chicles y caramelos sin azúcar, algunas mantequillas de maní", "pgch", "mortal", "En perros baja el azúcar en minutos y daña el hígado."],
+    ["golosinas", "🍺", "Alcohol", "Cerveza, vino, pisco, postres con licor", "pgch", "mortal", "Provoca intoxicación grave incluso en poca cantidad."],
+    ["golosinas", "🍞", "Panetón y queques con pasas", "Panetón, queque inglés, pan con pasas", "pg", "mortal", "Las pasas pueden causar falla renal."],
+    ["golosinas", "🍰", "Dulces y postres", "Torta, helado, picarones, mazamorra", "pgch", "cuidado", "Exceso de azúcar y grasa: diarrea y obesidad."],
+    ["golosinas", "🥤", "Gaseosas y jugos azucarados", "Gaseosas, refrescos, jugos de caja", "pgch", "cuidado", "Solo deben beber agua."],
 
     // ---------- Frutas ----------
-    ["frutas", "🍇", "Uvas y pasas", "Uvas frescas, pasas, jugo de uva, vino", "pg", "mortal", "Pueden causar falla renal en perros incluso en cantidades pequeñas. No se sabe qué perros son más sensibles: evítalas siempre."],
-    ["frutas", "🥑", "Palta", "Pulpa, pepa, cáscara, guacamole", "pgch", "mortal", "La persina es mortal para conejos y roedores. En perros y gatos causa vómitos y pancreatitis por la grasa; la pepa obstruye el intestino."],
-    ["frutas", "🍑", "Pepas y carozos de frutas", "Pepa de durazno, mango, ciruela, cereza, níspero, damasco; semillas de manzana y pera", "pgch", "grave", "Liberan cianuro al masticarse y los carozos grandes obstruyen el intestino. Da la fruta siempre sin pepas."],
-    ["frutas", "⭐", "Carambola", "Fruta estrella", "pg", "grave", "Sus oxalatos dañan los riñones, sobre todo en animales con problemas renales."],
-    ["frutas", "🍋", "Cítricos", "Limón, naranja, mandarina, toronja, sus cáscaras y aceites", "pgh", "cuidado", "Sus aceites irritan el estómago y la piel. En hámsters son demasiado ácidos; a los gatos les causan vómitos."],
-    ["frutas", "🍎", "Frutas dulces en hámsters enanos", "Plátano, uva, mango y otras frutas muy dulces", "h", "cuidado", "Los hámsters Roborovski y Campbell tienden a la diabetes: casi nada de fruta."],
-    ["frutas", "🌿", "Ruibarbo", "Tallos y hojas", "pgch", "grave", "Rico en oxalatos: daña los riñones y baja el calcio en la sangre."],
+    ["frutas", "🍇", "Uvas y pasas", "Frescas, secas o en jugo", "pg", "mortal", "Pueden causar falla renal aguda."],
+    ["frutas", "🥑", "Palta", "Pulpa, pepa y cáscara", "pgch", "mortal", "Mortal en conejos y roedores; la pepa obstruye el intestino."],
+    ["frutas", "🍑", "Pepas y semillas de frutas", "Durazno, mango, ciruela, cereza, manzana", "pgch", "grave", "Liberan cianuro y pueden obstruir el intestino."],
+    ["frutas", "⭐", "Carambola", "Fruta estrella", "pg", "grave", "Daña los riñones."],
+    ["frutas", "🍋", "Cítricos", "Limón, naranja, mandarina y sus cáscaras", "pgh", "cuidado", "Irritan el estómago."],
+    ["frutas", "🍎", "Frutas dulces en hámsters enanos", "Plátano, uva, mango", "h", "cuidado", "Favorecen la diabetes."],
+    ["frutas", "🌿", "Ruibarbo", "Tallos y hojas", "pgch", "grave", "Daña los riñones."],
 
-    // ---------- Verduras, hierbas y condimentos ----------
-    ["verduras", "🧅", "Cebolla", "Cruda, cocida, frita, deshidratada, en polvo, en salsas, sopas y aderezos", "pgch", "grave", "Destruye los glóbulos rojos y causa anemia días después de comerla. Los gatos son los más sensibles."],
-    ["verduras", "🧄", "Ajo", "Diente de ajo, ajo en polvo, sal de ajo, aderezos y marinados", "pgch", "grave", "Mismo efecto que la cebolla (anemia), y es aún más concentrado. No sirve como antipulgas: es un mito."],
-    ["verduras", "🌱", "Poro, cebolla china y cebollino", "Cebolla china del chaufa, poro, chalota, cebollino", "pgch", "grave", "Son de la misma familia que la cebolla y el ajo: también causan anemia."],
-    ["verduras", "🥔", "Papa cruda o verde y sus brotes", "Papa cruda, cáscara verde, brotes, hojas y tallos de la planta", "pgch", "grave", "La solanina causa vómitos, debilidad y alteraciones nerviosas. En conejos y hámsters además tiene demasiado almidón."],
-    ["verduras", "🍠", "Camote crudo", "Camote crudo, con cáscara, con moho o en dulce (con azúcar o chancaca)", "pgc", "cuidado", "No es tóxico, pero crudo es difícil de digerir: gases, vómitos y riesgo de que los trozos duros se atoren. Cocido, sin cáscara y sin azúcar sí es un buen premio para perros. A los conejos no se les da por su almidón."],
-    ["verduras", "🍅", "Tomate verde y la planta de tomate", "Tomates verdes, hojas y tallos", "pgch", "grave", "Contienen solanina y tomatina. El tomate bien maduro en poca cantidad no suele ser problema para perros."],
-    ["verduras", "🍄", "Hongos silvestres", "Hongos que crecen en jardines y parques", "pgch", "mortal", "Algunos destruyen el hígado en horas. Si lo viste comer uno, llévalo de inmediato con una foto del hongo."],
-    ["verduras", "🌶️", "Ají, rocoto y comida picante", "Ají amarillo, rocoto, ají limo, salsas picantes", "pgch", "cuidado", "Irritan la boca y el estómago: babeo, vómitos y diarrea."],
-    ["verduras", "🫘", "Menestras crudas", "Frejol, pallar, garbanzo y lentejas crudos o mal cocidos", "pgch", "grave", "Las lectinas crudas causan vómitos y diarrea fuertes. A conejos y hámsters no se les dan ni cocidas."],
-    ["verduras", "🌽", "Choclo en coronta", "Mazorca o coronta de choclo", "pg", "grave", "Los perros la tragan en trozos y causa obstrucción intestinal que suele necesitar cirugía."],
-    ["verduras", "🥬", "Lechuga americana (iceberg)", "Lechuga repollada o iceberg", "ch", "cuidado", "Casi no nutre y provoca diarrea en conejos y hámsters. Usa lechuga romana u hojas verdes oscuras."],
-    ["verduras", "🥦", "Repollo y coliflor en exceso", "Repollo, coliflor, col", "c", "cuidado", "Producen muchos gases, y en los conejos los gases pueden ser graves."],
-    ["verduras", "🍆", "Berenjena cruda", "Berenjena y su planta", "ch", "cuidado", "Contiene solanina, igual que la papa verde."],
-    ["verduras", "🧂", "Nuez moscada y especias fuertes", "Nuez moscada, clavo de olor, canela en exceso, curry", "pgch", "grave", "La nuez moscada causa alucinaciones, temblores y convulsiones."],
+    // ---------- Verduras y condimentos ----------
+    ["verduras", "🧅", "Cebolla", "Cruda, cocida, en polvo o en salsas", "pgch", "grave", "Destruye los glóbulos rojos y causa anemia."],
+    ["verduras", "🧄", "Ajo", "Diente, en polvo o en aderezos", "pgch", "grave", "Causa anemia. No sirve como antipulgas."],
+    ["verduras", "🌱", "Poro y cebolla china", "Poro, cebolla china, cebollino", "pgch", "grave", "Causan anemia, igual que la cebolla."],
+    ["verduras", "🥔", "Papa cruda o verde", "Papa cruda, cáscara verde, brotes", "pgch", "grave", "La solanina causa vómitos y debilidad."],
+    ["verduras", "🍠", "Camote crudo", "Crudo, con cáscara o en dulce", "pgc", "cuidado", "Difícil de digerir. Cocido y sin cáscara sí es apto para perros."],
+    ["verduras", "🍅", "Tomate verde y su planta", "Tomates verdes, hojas y tallos", "pgch", "grave", "Contienen solanina."],
+    ["verduras", "🍄", "Hongos silvestres", "De jardines y parques", "pgch", "mortal", "Algunos destruyen el hígado en horas."],
+    ["verduras", "🌶️", "Ají y rocoto", "Ají, rocoto, salsas picantes", "pgch", "cuidado", "Irritan la boca y el estómago."],
+    ["verduras", "🫘", "Menestras crudas", "Frejol, pallar, garbanzo crudos", "pgch", "grave", "Provocan vómitos y diarrea intensos."],
+    ["verduras", "🌽", "Choclo en coronta", "Mazorca o coronta", "pg", "grave", "Causa obstrucción intestinal."],
+    ["verduras", "🥬", "Lechuga americana", "Lechuga iceberg", "ch", "cuidado", "Provoca diarrea."],
+    ["verduras", "🥦", "Repollo y coliflor en exceso", "Repollo, coliflor, col", "c", "cuidado", "Producen gases peligrosos en conejos."],
+    ["verduras", "🍆", "Berenjena cruda", "Fruto y planta", "ch", "cuidado", "Contiene solanina."],
+    ["verduras", "🧂", "Nuez moscada", "Nuez moscada y especias fuertes", "pgch", "grave", "Causa temblores y convulsiones."],
 
     // ---------- Carnes, lácteos y huevos ----------
-    ["animal", "🦴", "Huesos cocidos", "Huesos de pollo, chancho o res cocidos o a la parrilla", "pg", "grave", "Se astillan y pueden atorarse en la garganta o perforar el estómago y el intestino."],
-    ["animal", "🐟", "Espinas de pescado", "Espinas, cabezas y colas de pescado", "pg", "grave", "Se clavan en la boca, la garganta o el intestino."],
-    ["animal", "🥓", "Grasa, piel y chicharrón", "Piel de pollo, pellejo, gordura de la carne, chicharrón", "pg", "grave", "Mucha grasa de golpe causa pancreatitis: vómitos, dolor abdominal fuerte y decaimiento."],
-    ["animal", "🥩", "Carne, pollo o pescado crudos", "Carne cruda, ceviche, pescado crudo, menudencias crudas", "pgh", "cuidado", "Riesgo de salmonela y parásitos. En gatos, el pescado crudo frecuente destruye la vitamina B1."],
-    ["animal", "🥚", "Huevo crudo", "Huevo crudo, ponches o masas con huevo crudo", "pg", "cuidado", "Riesgo de salmonela. La clara cruda bloquea la absorción de biotina. Cocido sí puede comerlo."],
-    ["animal", "🫀", "Hígado en exceso", "Hígado de pollo o res todos los días", "pg", "cuidado", "Demasiada vitamina A daña huesos y articulaciones."],
-    ["animal", "🥛", "Leche y lácteos", "Leche de vaca, queso, yogur azucarado, manjar blanco, helado", "pgc", "cuidado", "La mayoría de perros y gatos adultos no digiere la lactosa: diarrea y gases. Los conejos nunca deben comer lácteos."],
-    ["animal", "🌭", "Embutidos", "Jamón, hot dog, salchicha, chorizo, mortadela, tocino", "pg", "cuidado", "Mucha sal, grasa y conservantes; muchos traen ajo y cebolla."],
-    ["animal", "🍖", "Cualquier carne o huevo para conejos", "Carne, pollo, huevo, comida de perro o gato", "c", "grave", "Los conejos son herbívoros estrictos: su intestino no procesa proteína animal."],
-    ["animal", "🐟", "Atún en lata para humanos", "Atún en aceite o salmuera todos los días", "g", "cuidado", "Exceso de sal y mercurio. Crea adicción y desbalancea su dieta."],
-    ["animal", "🐶", "Comida de perro para gatos", "Croquetas o latas de perro", "g", "cuidado", "No tiene suficiente taurina: a la larga causa problemas del corazón y ceguera en gatos."],
+    ["animal", "🦴", "Huesos cocidos", "Pollo, cerdo o res", "pg", "grave", "Se astillan y perforan el intestino."],
+    ["animal", "🐟", "Espinas de pescado", "Espinas y cabezas", "pg", "grave", "Se clavan en la boca o el intestino."],
+    ["animal", "🥓", "Grasa y piel", "Piel de pollo, gordura, chicharrón", "pg", "grave", "Causan pancreatitis."],
+    ["animal", "🥩", "Carne o pescado crudos", "Carne cruda, ceviche", "pgh", "cuidado", "Riesgo de bacterias y parásitos."],
+    ["animal", "🥚", "Huevo crudo", "Huevo crudo o en masas", "pg", "cuidado", "Riesgo de salmonela. Cocido sí es apto."],
+    ["animal", "🫀", "Hígado en exceso", "Hígado diario", "pg", "cuidado", "El exceso de vitamina A daña los huesos."],
+    ["animal", "🥛", "Leche y lácteos", "Leche, queso, manjar blanco, helado", "pgc", "cuidado", "Provocan diarrea."],
+    ["animal", "🌭", "Embutidos", "Jamón, hot dog, chorizo", "pg", "cuidado", "Exceso de sal, grasa y condimentos."],
+    ["animal", "🍖", "Carne o huevo para conejos", "Cualquier alimento de origen animal", "c", "grave", "Son herbívoros estrictos."],
+    ["animal", "🐟", "Atún enlatado frecuente", "Atún en aceite o salmuera", "g", "cuidado", "Exceso de sal y mercurio."],
+    ["animal", "🐶", "Alimento de perro para gatos", "Croquetas o latas de perro", "g", "cuidado", "Carece de taurina."],
 
-    // ---------- Comida de casa y snacks ----------
-    ["casa", "🍗", "Pollo a la brasa y sus cremas", "Piel, huesos, papas fritas, mayonesa, ají, huancaína, ketchup", "pg", "grave", "Junta todo lo peligroso: grasa (pancreatitis), huesos que se astillan, sal, ajo y cebolla."],
-    ["casa", "🍟", "Frituras y comida rápida", "Salchipapa, hamburguesa, pizza, pollo broaster, papas fritas", "pg", "grave", "Exceso de grasa y sal: pancreatitis, obesidad y problemas del corazón."],
-    ["casa", "🍜", "Sobras condimentadas", "Arroz chaufa, tallarín saltado, lomo saltado, guisos, seco, ají de gallina", "pg", "cuidado", "Casi siempre llevan cebolla, ajo, sillao (mucha sal) y condimentos."],
-    ["casa", "🍿", "Snacks salados", "Papitas, canchita, chifles, galletas saladas, piqueos", "pgch", "cuidado", "Exceso de sodio: sed intensa, vómitos y, en grandes cantidades, convulsiones."],
-    ["casa", "🧊", "Sal en exceso y cubitos de caldo", "Cubitos, sazonadores en sobre, glutamato, sal de mesa", "pgch", "grave", "Intoxicación por sodio. Los cubitos además contienen cebolla y ajo en polvo."],
-    ["casa", "🥖", "Masa cruda con levadura", "Masa de pan o pizza sin hornear", "pg", "mortal", "Se infla dentro del estómago y produce alcohol al fermentar: hinchazón grave e intoxicación."],
-    ["casa", "🍞", "Pan, galletas, cereales y fideos", "Pan, galletas, cereales azucarados, fideos, arroz", "c", "cuidado", "Los carbohidratos alteran la flora intestinal del conejo y pueden causar estasis digestiva."],
-    ["casa", "🍪", "Comida pegajosa para hámsters", "Mantequilla de maní, caramelo, chicle, miel espesa", "h", "grave", "Se pega en los abazones (cachetes) y puede infectarlos o asfixiarlo."],
+    // ---------- Comida casera y snacks ----------
+    ["casa", "🍗", "Pollo a la brasa y cremas", "Piel, huesos, papas fritas, mayonesa, ají", "pg", "grave", "Grasa, huesos, sal y condimentos a la vez."],
+    ["casa", "🍟", "Frituras y comida rápida", "Salchipapa, hamburguesa, pizza", "pg", "grave", "Causan pancreatitis."],
+    ["casa", "🍜", "Comida condimentada", "Chaufa, lomo saltado, guisos", "pg", "cuidado", "Suelen contener cebolla, ajo y sillao."],
+    ["casa", "🍿", "Snacks salados", "Papitas, canchita, chifles", "pgch", "cuidado", "Exceso de sodio."],
+    ["casa", "🧊", "Cubitos y sazonadores", "Cubitos de caldo, sal, glutamato", "pgch", "grave", "Intoxicación por sodio; contienen cebolla y ajo."],
+    ["casa", "🥖", "Masa cruda con levadura", "Masa de pan o pizza", "pg", "mortal", "Se expande en el estómago y produce alcohol."],
+    ["casa", "🍞", "Pan, galletas y cereales", "Pan, fideos, arroz, cereales", "c", "cuidado", "Alteran su digestión."],
+    ["casa", "🍪", "Alimentos pegajosos", "Mantequilla de maní, caramelo", "h", "grave", "Obstruyen los abazones."],
 
-    // ---------- Frutos secos, semillas y granos ----------
-    ["semillas", "🌰", "Nueces de macadamia", "Macadamias solas o en galletas y chocolates", "p", "grave", "En perros causan debilidad en las patas traseras, temblores y fiebre."],
-    ["semillas", "🥜", "Nueces, pecanas y castañas", "Nueces, pecanas, castañas, pistachos", "pg", "cuidado", "Mucha grasa (pancreatitis) y pueden tener moho tóxico. Las enteras pueden obstruir el intestino."],
-    ["semillas", "🌰", "Almendras", "Almendras, sobre todo las amargas", "ph", "grave", "Las almendras amargas contienen cianuro, muy peligroso para hámsters. En perros causan obstrucción."],
-    ["semillas", "🥜", "Maní salado o confitado", "Maní salado, garapiñado, confitado o con chocolate", "pgch", "cuidado", "Sal, azúcar y a veces xilitol. El maní natural sin sal, en poca cantidad, no suele ser problema para perros."],
-    ["semillas", "🌻", "Semillas de girasol en exceso", "Pepitas de girasol, mezclas con muchas semillas grasas", "ch", "cuidado", "Muy grasas: obesidad e hígado graso. Solo como premio ocasional en hámsters."],
-    ["semillas", "🌽", "Mezclas de semillas y maíz para conejos", "Mezclas de colores con maíz, semillas y galletitas", "c", "cuidado", "El conejo se come solo lo dulce y deja el heno: problemas dentales y digestivos."],
+    // ---------- Frutos secos y semillas ----------
+    ["semillas", "🌰", "Nueces de macadamia", "Solas o en galletas", "p", "grave", "Causan debilidad y temblores."],
+    ["semillas", "🥜", "Nueces y castañas", "Nueces, pecanas, pistachos", "pg", "cuidado", "Exceso de grasa y riesgo de moho."],
+    ["semillas", "🌰", "Almendras", "Especialmente las amargas", "ph", "grave", "Contienen cianuro."],
+    ["semillas", "🥜", "Maní salado o confitado", "Salado, garapiñado o con chocolate", "pgch", "cuidado", "Sal, azúcar y posible xilitol."],
+    ["semillas", "🌻", "Semillas de girasol en exceso", "Pepitas y mezclas grasas", "ch", "cuidado", "Causan obesidad."],
+    ["semillas", "🌽", "Mezclas con maíz para conejos", "Mezclas de colores", "c", "cuidado", "Causan problemas dentales y digestivos."],
 
     // ---------- Plantas ----------
-    ["plantas", "🌸", "Lirios y azucenas", "Hojas, flores, polen y hasta el agua del florero", "g", "mortal", "Causan insuficiencia renal en gatos en 1 a 3 días. Basta con lamerse el polen del pelo."],
-    ["plantas", "🌴", "Cica (palma de sagú)", "Semillas, hojas y raíz", "pg", "mortal", "Destruye el hígado. Es muy común en jardines de Lima."],
-    ["plantas", "🌺", "Adelfa (laurel rosa)", "Hojas, flores y tallos; común en parques y bermas", "pgch", "mortal", "Afecta el corazón: arritmias y paro cardíaco incluso con pocas hojas."],
-    ["plantas", "🌱", "Higuerilla (ricino)", "Semillas de la planta silvestre que crece en descampados", "pgch", "mortal", "Sus semillas contienen ricina, una de las toxinas más potentes que existen."],
-    ["plantas", "🎺", "Floripondio", "Flores, hojas y semillas", "pgch", "mortal", "Causa alucinaciones, pupilas dilatadas, taquicardia y convulsiones."],
-    ["plantas", "🪴", "Poto, galatea (diefembaquia), filodendro y cala", "Plantas de interior muy comunes", "pgch", "grave", "Sus cristales de oxalato queman la boca: babeo intenso, hinchazón y vómitos."],
-    ["plantas", "🌷", "Azalea, tulipán, narciso y hiedra", "Flores, hojas y sobre todo los bulbos", "pgch", "grave", "Vómitos, diarrea, debilidad y alteraciones del corazón."],
-    ["plantas", "🌵", "Sábila (aloe vera)", "Hojas y látex amarillo", "pgc", "cuidado", "Su látex causa vómitos y diarrea."],
-    ["plantas", "🌺", "Flor de Pascua", "Hojas rojas de Navidad", "pg", "cuidado", "Su savia irrita la boca y el estómago."],
+    ["plantas", "🌸", "Lirios y azucenas", "Hojas, flores y polen", "g", "mortal", "Causan falla renal en gatos."],
+    ["plantas", "🌴", "Cica (palma de sagú)", "Semillas y hojas", "pg", "mortal", "Destruye el hígado."],
+    ["plantas", "🌺", "Adelfa (laurel rosa)", "Común en parques", "pgch", "mortal", "Provoca paro cardíaco."],
+    ["plantas", "🌱", "Higuerilla (ricino)", "Crece en descampados", "pgch", "mortal", "Sus semillas son altamente tóxicas."],
+    ["plantas", "🎺", "Floripondio", "Flores y semillas", "pgch", "mortal", "Causa alucinaciones y convulsiones."],
+    ["plantas", "🪴", "Plantas de interior", "Poto, galatea, filodendro, cala", "pgch", "grave", "Queman la boca y causan vómitos."],
+    ["plantas", "🌷", "Azalea, tulipán y hiedra", "Flores y bulbos", "pgch", "grave", "Afectan el corazón y la digestión."],
+    ["plantas", "🌵", "Sábila", "Hojas y látex", "pgc", "cuidado", "Provoca vómitos y diarrea."],
+    ["plantas", "🌺", "Flor de Pascua", "Hojas rojas navideñas", "pg", "cuidado", "Irrita la boca y el estómago."],
 
-    // ---------- Medicinas y productos del hogar ----------
-    ["hogar", "💊", "Paracetamol", "Panadol, Doloral y cualquier antigripal con paracetamol", "pgch", "mortal", "Una sola pastilla puede matar a un gato. En perros daña el hígado."],
-    ["hogar", "💊", "Antiinflamatorios humanos", "Ibuprofeno, naproxeno, diclofenaco, aspirina, ketorolaco", "pgch", "mortal", "Causan úlceras con sangrado y falla renal. Nunca los medices por tu cuenta."],
-    ["hogar", "💉", "Otros medicamentos humanos", "Antidepresivos, pastillas para dormir, anticonceptivos, vitaminas con hierro", "pgch", "grave", "Guarda los medicamentos en lugares altos y cerrados: los perros muerden los blísteres."],
-    ["hogar", "🐀", "Raticidas y venenos", "Veneno para ratas en cebo, pellets o bloques", "pgch", "mortal", "Causan hemorragias internas días después. Lleva el empaque al veterinario: el tratamiento depende del tipo."],
-    ["hogar", "🐜", "Pipeta de perro en gatos", "Pipetas o collares con permetrina para perros", "g", "mortal", "La permetrina causa temblores y convulsiones en gatos. Usa solo productos indicados para gatos."],
-    ["hogar", "🧴", "Productos de limpieza", "Lejía, detergente, desinfectantes, limpiadores con fenol o pino", "pgch", "grave", "Quemaduras en boca y esófago. Los gatos son muy sensibles a los fenoles."],
-    ["hogar", "🫙", "Aceites esenciales", "Árbol de té, eucalipto, menta, cítricos, difusores", "pg", "grave", "Los gatos no pueden eliminarlos: daño al hígado y temblores. Cuidado con los difusores en casa."],
-    ["hogar", "🚬", "Cigarros y vapeadores", "Colillas, tabaco, líquidos de vape, chicles de nicotina", "pgch", "mortal", "La nicotina causa vómitos, temblores y paro cardíaco."],
-    ["hogar", "🔋", "Pilas, monedas y objetos pequeños", "Pilas de botón, monedas, imanes, ligas, hilos", "pgch", "grave", "Las pilas queman el esófago en horas; algunas monedas liberan zinc tóxico."],
-    ["hogar", "🚗", "Refrigerante de auto (anticongelante)", "Líquido de radiador", "pg", "mortal", "Tiene sabor dulce y lo beben con gusto. Pocas cucharadas causan falla renal."],
-    ["hogar", "🌿", "Marihuana y comestibles con THC", "Hojas, colillas, brownies o gomitas", "pg", "grave", "Descoordinación, orina sin control, pupilas dilatadas y, si trae chocolate, doble intoxicación."]
+    // ---------- Medicamentos y productos del hogar ----------
+    ["hogar", "💊", "Paracetamol", "Y antigripales que lo contengan", "pgch", "mortal", "Una pastilla puede ser mortal para un gato."],
+    ["hogar", "💊", "Antiinflamatorios de uso humano", "Ibuprofeno, naproxeno, diclofenaco, aspirina", "pgch", "mortal", "Causan úlceras y falla renal."],
+    ["hogar", "💉", "Otros medicamentos humanos", "Antidepresivos, somníferos, vitaminas con hierro", "pgch", "grave", "Guárdelos fuera de su alcance."],
+    ["hogar", "🐀", "Raticidas", "Cebos y pellets", "pgch", "mortal", "Provocan hemorragias internas."],
+    ["hogar", "🐜", "Pipeta de perro en gatos", "Productos con permetrina", "g", "mortal", "Causa convulsiones en gatos."],
+    ["hogar", "🧴", "Productos de limpieza", "Lejía, detergente, desinfectantes", "pgch", "grave", "Queman la boca y el esófago."],
+    ["hogar", "🫙", "Aceites esenciales", "Árbol de té, eucalipto, difusores", "pg", "grave", "Dañan el hígado, sobre todo en gatos."],
+    ["hogar", "🚬", "Cigarros y vapeadores", "Colillas y líquidos con nicotina", "pgch", "mortal", "La nicotina provoca paro cardíaco."],
+    ["hogar", "🔋", "Pilas y monedas", "Pilas de botón, monedas, imanes", "pgch", "grave", "Queman el esófago o liberan zinc."],
+    ["hogar", "🚗", "Refrigerante de auto", "Líquido de radiador", "pg", "mortal", "Su sabor dulce atrae; causa falla renal."],
+    ["hogar", "🌿", "Marihuana", "Hojas o comestibles", "pg", "grave", "Causa descoordinación y somnolencia."]
   ];
 
   var SP = { p: ["🐶", "Perro"], g: ["🐱", "Gato"], c: ["🐰", "Conejo"], h: ["🐹", "Hámster"] };
@@ -132,7 +132,7 @@
             '<h4>' + t[2] + '</h4><p class="ej">' + t[3] + '</p><p>' + t[6] + '</p>' +
             '<div class="tox-sp">' + t[4].split("").map(function (k) { return '<span title="' + SP[k][1] + '">' + SP[k][0] + ' ' + SP[k][1] + '</span>'; }).join("") + '</div></article>';
         }).join("") + '</div></div>';
-    }).join("") || '<p class="tox-empty">No encontramos coincidencias. Si tienes una duda sobre un alimento, <a data-wa="Hola VetLu, ¿mi mascota puede comer…?">pregúntanos por WhatsApp</a>.</p>';
+    }).join("") || '<p class="tox-empty">Sin resultados. <a data-wa="Hola VetLu, ¿mi mascota puede comer…?">Consúltenos por WhatsApp</a>.</p>';
     document.getElementById("toxCount").textContent = total;
     list.querySelectorAll("[data-wa]").forEach(function (a) { a.href = window.VETLU.wa(a.getAttribute("data-wa")); a.target = "_blank"; });
   }
@@ -149,9 +149,9 @@
   });
   document.getElementById("toxSearch").addEventListener("input", function (e) { state.q = e.target.value; render(); });
 
-  var hash = location.hash.replace("#", "");
-  if (SP[{ perro: "p", gato: "g", conejo: "c", hamster: "h" }[hash]]) {
-    var k = { perro: "p", gato: "g", conejo: "c", hamster: "h" }[hash];
+  // Filtrar por especie desde el enlace (#perro, #gato…)
+  var k = { perro: "p", gato: "g", conejo: "c", hamster: "h" }[location.hash.replace("#", "")];
+  if (k) {
     state.sp = k;
     var btn = document.querySelector('[data-tox="sp"] [data-v="' + k + '"]');
     if (btn) document.querySelectorAll('[data-tox="sp"] button').forEach(function (x) { x.setAttribute("aria-pressed", x === btn); });

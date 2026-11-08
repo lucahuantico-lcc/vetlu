@@ -15,8 +15,7 @@
       "Los perros entienden unas 165 palabras",
       "Los gatos tienen 32 músculos en cada oreja",
       "Los dientes de un conejo crecen ~1 cm al mes",
-      "Un perro puede oler el miedo a través del sudor humano",
-      "Los gatos casi solo maúllan para comunicarse con humanos",
+            "Los gatos casi solo maúllan para comunicarse con humanos",
       "Adoptar salva dos vidas: la suya y la del siguiente rescatado"
     ];
     var html = datos.map(function (d) { return '<span class="ticker-item">' + d + "</span>"; }).join("");
@@ -27,25 +26,25 @@
   var quizBox = document.getElementById("quizBox");
   if (quizBox) {
     var Q = [
-      ["¿Cómo es tu hogar?", [
+      ["¿Cómo es su hogar?", [
         ["🏡 Casa con patio o jardín", { perro: 3, conejo: 1 }],
         ["🏢 Departamento", { gato: 2, conejo: 2, hamster: 1 }],
         ["🛏️ Una habitación", { hamster: 3, gato: 1 }],
         ["🌳 Departamento cerca de un parque", { perro: 2, gato: 1 }]
       ]],
-      ["¿Cuánto tiempo puedes dedicarle al día?", [
+      ["¿Cuánto tiempo puede dedicarle al día?", [
         ["⏰ Más de 2 horas", { perro: 3 }],
         ["⌛ Alrededor de 1 hora", { conejo: 2, gato: 2 }],
         ["⏱️ 30 minutos", { hamster: 2, gato: 1 }],
         ["🌙 Solo por las noches", { hamster: 3, gato: 1 }]
       ]],
-      ["¿Qué buscas en un compañero?", [
+      ["¿Qué busca en un compañero?", [
         ["🏃 Aventuras y paseos", { perro: 3 }],
         ["🛋️ Mimos y calma", { gato: 3, conejo: 1 }],
         ["🤓 Observarlo y aprender de él", { hamster: 2, conejo: 1 }],
         ["🎈 Juego y curiosidad", { conejo: 2, gato: 1, perro: 1 }]
       ]],
-      ["¿Por cuánto tiempo puedes comprometerte?", [
+      ["¿Por cuánto tiempo puede comprometerse?", [
         ["💍 15 años o más", { gato: 3, perro: 2 }],
         ["📅 Unos 10 años", { perro: 2, conejo: 2 }],
         ["🗓️ 2 a 3 años", { hamster: 3 }],
@@ -53,10 +52,10 @@
       ]]
     ];
     var R = {
-      perro: ["🐶", "¡Un perro!", "Tienes energía, tiempo y ganas de salir. Un perro adoptado será tu mejor compañero de aventuras."],
-      gato: ["🐱", "¡Un gato!", "Valoras la calma y la independencia. Un gato te dará cariño a su ritmo (y mucha compañía)."],
-      conejo: ["🐰", "¡Un conejo!", "Eres paciente y detallista. Un conejo te sorprenderá con su inteligencia y sus 'binkies'."],
-      hamster: ["🐹", "¡Un hámster!", "Tu espacio y horario son ideales para un pequeño nocturno lleno de personalidad."]
+      perro: ["🐶", "¡Un perro!", "Tiene tiempo y energía para paseos diarios."],
+      gato: ["🐱", "¡Un gato!", "Valora la calma y la independencia."],
+      conejo: ["🐰", "¡Un conejo!", "Es paciente y detallista."],
+      hamster: ["🐹", "¡Un hámster!", "Su espacio y horario son ideales para una mascota nocturna."]
     };
     // answers[n] = índice de la opción elegida en la pregunta n (permite volver atrás)
     var step = 0, answers = [];
@@ -76,7 +75,7 @@
         var best = Object.keys(s).sort(function (a, b) { return s[b] - s[a]; })[0];
         var r = R[best];
         quizBox.innerHTML = '<div class="progress"><span style="width:100%"></span></div><div class="final"><span class="em">' + r[0] + '</span><h3 style="font-size:2.2rem">' + r[1] + '</h3><p class="lead" style="margin:0 auto 24px">' + r[2] + '</p>' +
-          '<div class="btn-row" style="justify-content:center"><a href="adopcion.html#' + best + '" class="btn btn--terra">Conoce a los que buscan hogar <span class="arrow">→</span></a><a href="' + best + '.html" class="btn btn--ghost">Leer su guía</a><button class="btn btn--ghost" type="button" data-again>Repetir</button></div>' +
+          '<div class="btn-row" style="justify-content:center"><a href="adopcion.html#' + best + '" class="btn btn--terra">Ver mascotas en adopción <span class="arrow">→</span></a><a href="' + best + '.html" class="btn btn--ghost">Ver guía</a><button class="btn btn--ghost" type="button" data-again>Repetir</button></div>' +
           '<div class="quiz-nav" style="justify-content:center">' + backBtn + '</div></div>';
         return;
       }

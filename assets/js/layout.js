@@ -29,12 +29,12 @@
     ["precios", "precios.html", "Precios"],
     ["productos", "productos.html", "Productos"],
     ["mascotas", "#", "Mascotas", [
-      ["perro", "perro.html", "🐶", "Perros", "Cuidados, edad y salud"],
-      ["gato", "gato.html", "🐱", "Gatos", "Felinos felices"],
-      ["conejo", "conejo.html", "🐰", "Conejos", "Heno, espacio y calma"],
-      ["hamster", "hamster.html", "🐹", "Hámsters", "Pequeños gigantes"],
-      ["comida", "comida-prohibida.html", "🚫", "Comida prohibida", "Lo que nunca deben comer"],
-      ["casos", "por-que-hace-eso.html", "🤔", "¿Por qué hace eso?", "Conductas raras y cómo corregirlas"]
+      ["perro", "perro.html", "🐶", "Perros", "Guía de cuidado"],
+      ["gato", "gato.html", "🐱", "Gatos", "Guía de cuidado"],
+      ["conejo", "conejo.html", "🐰", "Conejos", "Guía de cuidado"],
+      ["hamster", "hamster.html", "🐹", "Hámsters", "Guía de cuidado"],
+      ["comida", "comida-prohibida.html", "🚫", "Comida prohibida", "Alimentos peligrosos"],
+      ["casos", "por-que-hace-eso.html", "🤔", "¿Por qué hace eso?", "Conductas y soluciones"]
     ]],
     ["consejos", "consejos.html", "Consejos"],
     ["visitas", "visitas.html", "¿Cada cuánto?"],
@@ -51,7 +51,7 @@
         }).join("") + '</ul></li>';
     }
     return '<li><a href="' + n[1] + '"' + (page === n[0] ? ' class="active" aria-current="page"' : "") + '>' + n[2] + '</a></li>';
-  }).join("") + '<li><a href="adopcion.html" class="nav-cta">🐾 Adopta</a></li>';
+  }).join("") + '<li><a href="adopcion.html" class="nav-cta">🐾 Adopción</a></li>';
 
   var headerDark = document.body.getAttribute("data-header") === "dark";
   var header = document.createElement("header");
@@ -70,7 +70,7 @@
     '<div class="container">' +
     '<div class="footer-grid">' +
     '<div><a href="index.html" class="logo"><span class="logo-mark">' + paw + '</span><span>Vet<em>Lu</em></span></a>' +
-    '<p>Clínica veterinaria en ' + C.direccion + '. Cuidamos con ciencia y con cariño, y creemos que el mejor amigo no se compra: <b style="color:var(--gold-soft)">se adopta</b>.</p>' +
+    '<p>Clínica veterinaria en ' + C.direccion + '. Promovemos la <b style="color:var(--gold-soft)">adopción responsable</b>.</p>' +
     '<div class="socials">' +
     '<a href="' + C.instagram + '" target="_blank" rel="noopener" aria-label="Instagram">' + icoIG + '</a>' +
     '<a href="' + C.x + '" target="_blank" rel="noopener" aria-label="X">' + icoX + '</a>' +
@@ -86,11 +86,11 @@
     '<li>' + icoMail + '<a href="mailto:' + C.email + '">' + C.email + '</a></li>' +
     '</ul><a class="btn btn--ghost-light" style="margin-top:18px;padding:.75em 1.2em;font-size:.85rem" href="' + C.mapa + '" target="_blank" rel="noopener">Cómo llegar <span class="arrow">→</span></a></div>' +
     '<div class="foot-card"><span class="hand">¿sabías que…?</span><p class="fact">' + facts[Math.floor(Math.random() * facts.length)] + '</p>' +
-    '<p class="foot-cta">Adopta y recibe <b>consulta gratis + 6 meses de plan de salud</b>.</p>' +
-    '<a href="adopcion.html" class="btn btn--terra" style="padding:.75em 1.2em;font-size:.85rem">Conoce a los que buscan hogar <span class="arrow">→</span></a></div>' +
+    '<p class="foot-cta">Al adoptar: <b>consulta gratis + 6 meses de plan de salud</b>.</p>' +
+    '<a href="adopcion.html" class="btn btn--terra" style="padding:.75em 1.2em;font-size:.85rem">Ver adopciones <span class="arrow">→</span></a></div>' +
     '</div>' +
     '<div class="big-word">VetLu</div>' +
-    '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' VetLu · Clínica Veterinaria · Lima, Perú</span><span>Adopta, no compres 🐾</span></div>' +
+    '<div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' VetLu · Clínica Veterinaria · Lima, Perú</span><span>Adopte, no compre 🐾</span></div>' +
     '</div>';
   document.body.appendChild(footer);
 
@@ -99,7 +99,7 @@
   wa.href = C.wa();
   wa.target = "_blank";
   wa.rel = "noopener";
-  wa.setAttribute("aria-label", "Escríbenos por WhatsApp");
+  wa.setAttribute("aria-label", "Escríbanos por WhatsApp");
   wa.innerHTML = icoWA;
   document.body.appendChild(wa);
 
